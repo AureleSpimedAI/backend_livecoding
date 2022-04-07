@@ -19,7 +19,6 @@ app.get("/", (request, response) => {
 const apiRouter = require("./routes/api");
 app.use("/api", apiRouter);
 
-const PORT = 3001;
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Server running on port ${PORT}`);
 });
