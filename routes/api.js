@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 /** Récupération de la date d'aujourd'hui */
 let date_ob = new Date();
