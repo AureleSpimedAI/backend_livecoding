@@ -16,9 +16,10 @@ router.get("/", (req, res) => {
 /** Requête post permettant le hashage de l'input envoyé */
 router.post("/", (req, res) => {
   console.log("Hash begin !");
-  console.log(req.body.input);
+  console.log("Input received : " + req.body.input);
   const inputToHash = req.body.input;
   const hashedInput = bcrypt.hashSync(inputToHash, 10);
+  console.log("Hashed input made : " + hashedInput);
   res.json("HashedInput : " + hashedInput + " ! ");
 });
 
